@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
-import { Container } from 'react-bootstrap'
+import {
+  Button,
+  Container,
+} from 'react-bootstrap'
 
 export default class LayoutAside extends Component {
   render() {
@@ -7,7 +10,6 @@ export default class LayoutAside extends Component {
       <Container>
         <h3>Titilt</h3>
         <h4>Prise</h4>
-        <h4>Color</h4>
         <p>
           Bootstrap 4 is built with flexbox, but not every element’s display has
           been changed to display: flex as this would add many unnecessary
@@ -24,6 +26,7 @@ export default class LayoutAside extends Component {
           browser behaviors. Most of our components are built with flexbox
           enabled.
         </p>
+        <Button variant="dark">Добавить в корзину</Button>
       </Container>
     )
   }

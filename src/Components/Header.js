@@ -20,6 +20,9 @@ import Product from '../Pages/Product'
 import Сatalog from '../Pages/Сatalog'
 import AboutUs from '../Pages/AboutUs'
 import HowToOrder from '../Pages/HowToOrder'
+import Declarations from '../Pages/Declarations'
+import Contacts from '../Pages/Contacts'
+
 
 export default class Header extends Component {
   render() {
@@ -39,28 +42,30 @@ export default class Header extends Component {
                 </Nav.Link>
               </Col>
               <Col className="text-start p-1" lg="1">
-                <Nav.Link href="/aboutus">Декларации </Nav.Link>
+                <Nav.Link as={Link} to="/declarations">Декларации </Nav.Link>
               </Col>
               <Col className="text-start p-1" lg="1">
-                <Nav.Link href="/aboutus">Отзывы </Nav.Link>
+                <Nav.Link href="https://reviews.yandex.ru/" target='_blank'>Отзывы </Nav.Link>
               </Col>
+
               <Col className="text-start p-1" lg="1">
-                <Nav.Link href="/aboutus">Контакты </Nav.Link>
+                <Nav.Link href="https://www.avito.ru/" target='_blank'>Outlet </Nav.Link>
               </Col>
-              <Col className="text-start p-1" lg="1">
-                <Nav.Link href="/aboutus">Outlet </Nav.Link>
-              </Col>
-              <Col className="text-end " lg="5">
-                <h6>
-                  <FaVk size="1.7rem" />
-                  <FaTelegramPlane size="1.7rem" />
-                  <FaYoutube size="1.7rem" />
-                </h6>
-              </Col>
+              <Col xs={4}> </Col>
+                <Col >
+                  <Nav.Link href="https://vk.com/" target='_blank'><FaVk size="1.7rem"/></Nav.Link>
+                  </Col>
+                  <Col >
+                  <Nav.Link href="https://www.web-telegram.ru/" target='_blank'><FaTelegramPlane size="1.7rem" /></Nav.Link>
+                  </Col>
+                  <Col >
+                  <Nav.Link href="https://www.youtube.com/" target='_blank'><FaYoutube size="1.7rem" /></Nav.Link>
+                  </Col>
+                
               <Col className="text-end p-1" lg="1">
-                <h6>
+                <Nav.Link href="https://web.whatsapp.com/" target='_blank'>
                   Написать нам <FaWhatsapp />
-                </h6>
+                  </Nav.Link>
               </Col>
             </Row>
           </Container>
@@ -98,15 +103,7 @@ export default class Header extends Component {
                       Separated link
                     </NavDropdown.Item>
                   </NavDropdown>
-                  <Form className="d-flex">
-                    <Form.Control
-                      type="search"
-                      placeholder="Search"
-                      className="me-2"
-                      aria-label="Search"
-                    />
-                    <Button variant="light">Search</Button>
-                  </Form>
+                  
                 </Nav>
 
                 <Nav>
@@ -114,10 +111,7 @@ export default class Header extends Component {
                     {' '}
                     <IoPerson size="2rem" color="white" />
                   </Nav.Link>
-                  <Nav.Link as={Link} to="/favorites">
-                    {' '}
-                    <IoHeart size="2rem" color="white" />
-                  </Nav.Link>
+                
                   <Nav.Link as={Link} to="/basket">
                     <IoCart size="2rem" color="white" />
                   </Nav.Link>
@@ -134,6 +128,9 @@ export default class Header extends Component {
             <Route exact path="/catalog" element={<Сatalog />} />
             <Route exact path="/aboutus" element={<AboutUs />} />
             <Route exact path="/howtoorder" element={<HowToOrder />} />
+            <Route exact path="/declarations" element={<Declarations />} />
+            <Route exact path="/сontacts" element={<Contacts />} />
+
           </Routes>
         </Router>
       </>
