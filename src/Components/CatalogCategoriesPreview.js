@@ -1,6 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component , useState, useEffect} from 'react'
 import { Row } from 'react-bootstrap'
 import CategoryPreviev from './CategoryPreviev'
+
+
 
 export default class CatalogCategoriesPreview extends Component {
   render() {
